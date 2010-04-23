@@ -14,16 +14,35 @@
 ScNpr.main = function main() {
 
   // Step 1: Instantiate Your Views
-  // The default code here will make the mainPane for your application visible
-  // on screen.  If you app gets any level of complexity, you will probably 
-  // create multiple pages and panes.  
   ScNpr.getPath('mainPage.mainPane').append() ;
 
-  // Step 2. Set the content property on your primary controller.
-  // This will make your app come alive!
+  var url_options = '&fields=title,teaser,storyDate,byline,audio,image,textWithHtml&requiredAssets=image,text&sort=dateDesc&output=JSON&apiKey=MDA1MDU4NjgxMDEyNzA4NjE0NDNkOTE2Mg001',
+      opts, q, entries ;
 
-  // TODO: Set the content property on your primary controller
-  // ex: ScNpr.contactsController.set('content',ScNpr.contacts);
+  opts = {
+    'basePath': 'list.story',
+    'uri': '/npr_api/query?id=1003,1004%@'.fmt(url_options)
+  } ;
+  
+  q = SC.Query.local(ScNpr.NewsStory, { params: opts }) ;
+  entries = ScNpr.store.find(q) ;
+  ScNpr.newsController.set('content', entries) ;
+  
+  opts = {
+    'basePath': 'list.story',
+    'uri': '/npr_api/query?id=1008%@'.fmt(url_options)
+  };
+  q = SC.Query.local(ScNpr.ArtsStory, { params: opts });
+  entries = ScNpr.store.find(q);   
+  ScNpr.artsController.set('content',entries);
+  
+  opts = {
+    'basePath': 'list.story',
+    'uri': '/npr_api/query?id=1106%@'.fmt(url_options)
+  };
+  q = SC.Query.local(ScNpr.MusicStory, { params: opts });
+  entries = ScNpr.store.find(q);   
+  ScNpr.musicController.set('content',entries);
 
 } ;
 

@@ -4,4 +4,5 @@
 # ===========================================================================
 
 # Add initial buildfile information here
-config :all, :required => :sproutcore
+config :all, :required => ['sproutcore','sproutcore/media']
+proxy '/npr_api/', :to => 'api.npr.org', :url => '/'
