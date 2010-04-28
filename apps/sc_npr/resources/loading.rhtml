@@ -4,6 +4,48 @@
    # caching and startup very fast, so your users will often only see this 
    # content for a brief moment on their first app load, if at all.
 %>
-<p class="loading">Loading...<p>
-
+<div id="npr-topbar" class="sc-view" style="left: 0px; right: 0px; top: 0px; height: 45px">
+  <div id="logo" class="sc-view" style="left: 15px; width: 72px; top: 10px; height: 24px"></div>
+  <div role="button" id="home" class="sc-view sc-button-view ScNpr sc-regular-size" style="left: 116px; width: 77px; top: 7px; height: 30px"></div>
+  <div role="button" id="home-active" class="sc-view sc-button-view hidden ScNpr sc-regular-size" style="left: 116px; width: 77px; top: 7px; height: 30px"></div>
+  <div role="button" id="topics" class="sc-view sc-button-view ScNpr sc-regular-size" style="right: 80px; width: 77px; top: 7px; height: 31px"></div>
+  <div role="button" id="settings" class="sc-view sc-button-view ScNpr sc-regular-size" style="right: 20px; width: 47px; top: 7px; height: 31px"></div>
+</div>
+<div id="workspace" class="sc-view" style="left: 0px; right: 0px; top: 45px; bottom: 71px">
+  <div id="leftCategories" class="sc-view" style="left: 0px; width: 101px; top: 0px; bottom: 0px">
+    <div id="sc512" class="sc-view newsLabel" style="left: 0px; right: 0px; top: 0px; height: 200px">
+      <div id="sc513" class="sc-view sc-label-view sc-regular-size" style="right: 10px; width: 65px; top: 20px; height: 100px; text-align: right; font-weight: normal; text-align: right; font-weight: normal">
+        news
+      </div>
+    </div>
+    <div id="sc514" class="sc-view artsLabel" style="left: 0px; right: 0px; top: 200px; height: 180px">
+      <div id="sc515" class="sc-view sc-label-view sc-regular-size" style="right: 10px; width: 50px; top: 20px; height: 100px; text-align: right; font-weight: normal; text-align: right; font-weight: normal">
+        arts &amp; life
+      </div>
+    </div>
+    <div id="sc516" class="sc-view musicLabel" style="left: 0px; right: 0px; top: 380px; height: 180px">
+      <div id="sc517" class="sc-view sc-label-view sc-regular-size" style="right: 10px; width: 77px; top: 20px; height: 100px; text-align: right; font-weight: normal; text-align: right; font-weight: normal">
+        music
+      </div>
+    </div>
+  </div>
+  <div id="rightArticles" class="sc-view" style="left: 101px; right: 0px; top: 0px; bottom: 0px">
+    <div id="sc519" class="sc-view sc-scroll-view newsSection sc-gray-border" style="left: 10px; right: 0px; top: 7px; height: 190px">
+      <div class="corner"></div>
+    </div>
+    <div id="sc533" class="sc-view sc-scroll-view artsSection sc-gray-border" style="left: 10px; right: 0px; top: 207px; height: 170px">
+      <div class="corner"></div>
+    </div>
+    <div id="sc542" class="sc-view sc-scroll-view musicSection sc-gray-border" style="left: 10px; right: 0px; top: 387px; height: 170px">
+      <div class="corner"></div>
+    </div>
+  </div>
+</div>
+<div id="bottomToolbar" class="sc-view" style="left: 0px; right: 0px; bottom: 0px; height: 72px">
+  <div id="sc557" class="sc-view" style="right: 50px; width: 200px; top: 25px; bottom: 25px">
+    <div id="sc558" class="sc-view sc-label-view sc-regular-size" style="left: 0px; right: 35px; top: 0px; bottom: 0px; text-align: right; font-weight: normal; text-align: right; font-weight: normal">
+      Support provided by
+    </div><img src="data:image/gif;base64,R0lGODlhAQABAJAAAP///wAAACH5BAUQAAAALAAAAAABAAEAAAICBAEAOw==" id="sc559" class="sc-view sc-image-view sc-regular-size" style="right: 0px; width: 30px; top: 0px; bottom: 0px" name="sc559">
+  </div>
+</div>
 <% end %>
